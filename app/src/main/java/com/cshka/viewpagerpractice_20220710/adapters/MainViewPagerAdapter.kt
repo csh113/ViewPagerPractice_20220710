@@ -19,8 +19,7 @@ class MainViewPagerAdapter(fm:FragmentManager) : FragmentPagerAdapter(fm) {
         when(position) {
             0 -> return NameFragment()
             1 -> return BirthFragment()
-            2 -> return HelloFragment()
-            else -> Log.e("error>>", "에러남!!")
+            else -> return HelloFragment()
         }
     }
 }
