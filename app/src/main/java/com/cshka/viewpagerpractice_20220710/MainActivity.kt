@@ -7,11 +7,15 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     lateinit var mPagerAdapter : MainViewPagerAdapter
+//    val mList = ArrayList
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         mPagerAdapter = MainViewPagerAdapter(supportFragmentManager)
         mainViewPager.adapter = mPagerAdapter
+
+        mainTabLayout.setupWithViewPager(mainViewPager)
     }
 }
